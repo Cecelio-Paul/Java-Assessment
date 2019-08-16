@@ -43,7 +43,7 @@ public class AssessmentTest {
 		assertTrue("Try sort the inputs by size then apply the same logic", oe.evenlySpaced(4, 6, 2));
 		assertFalse(oe.evenlySpaced(4, 6, 3));
 		assertFalse(oe.evenlySpaced(4, 60, 9));
-	}
+	} 
 
 	@Test
 	public void nMidTest() {

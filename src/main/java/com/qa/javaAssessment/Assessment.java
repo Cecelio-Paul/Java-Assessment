@@ -63,71 +63,39 @@ public class Assessment {
 		if (a>b && a>c) {
 			maxNumber = a;
 			
-		} else {
-			
-		if (b>a && b>c) {
+		} else if (b>a && b>c) {
 			
 			maxNumber = b;
 			
-		} else {
-			
-		if (c>a && c>b) {
+		} else if (c>a && c>b)  {
 			
 			maxNumber = c;
 			
-		} else {
-			
-		if (a<b && a>c ) {
+		} else if (a<b && a>c ){
 			
 			middleNumber = a;
 			
-		} else {
-			
-		if (b<a && b>c) {
+		} else if (b<a && b>c) {
 			
 			middleNumber = b;
 			
-		} else {
-			
-		if (c<a && c>b) {
+		} else if (c<a && c>b) {
 			
 			middleNumber = c;
 			
-		} else {
-			
-		if (a<b && a<c) {
+		} else if (a<b && a<c) {
 			
 			smallNumber = a;
 			
-		} else {
-			
-		if (b<a && b<c) {
+		} else if (b<a && b<c) {
 			
 			smallNumber = b;
 			
-		} else {
-			
-		if (c<a && c<b) {
+		} else if (c<a && c<b) {
 			
 			smallNumber = c;
 			
 		}
-			
-		}
-		
-		}
-			
-		}
-			
-		}
-		}
-			
-		}
-		
-		}
-			
-		}
-
 		
 		return true;
 		
@@ -190,8 +158,9 @@ public class Assessment {
 		int numberOfAms = 0;
 		
 		for (int i = 0; i < arg1.length(); i++) {
-			if (arg1.substring(i, i+1).contains("am")) {
-				
+			if (arg1.substring(i, i+2).contains("am")) {
+		
+		
 				
 			}
 			
@@ -206,7 +175,7 @@ public class Assessment {
 	//given a number 
 	// if this number is divisible by 3 return "fizz"
 	// if this number is divisible by 5 return "buzz"
-	// if this number is divisible by both 3  and 5return "fizzbuzz"
+	// if this number is divisible by both 3  and 5 return "fizzbuzz"
 	//
 	//fizzBuzz(3) ==> "fizz"
 	//fizzBuzz(10) ==> "buzz"
@@ -214,16 +183,16 @@ public class Assessment {
 	
 	public String fizzBuzz(int arg1) {
 		
-		int fizz = 3;
-		int buzz = 5;
+		if (arg1 % 3 == 0 && arg1 % 5 == 0) {
+			return "fizzBuzz";
+		} else if (arg1 % 3 == 0) {
+			return "fizz";
+		} else if (arg1 % 5 == 0) {
+			return "Buzz";
+		}
 		
 		
-		
-		
-		
-		
-		return fizzBuzz(100);
-		
+		return fizzBuzz(3);
 	}
 	
 	//Given a string split the string into the individual numbers present
@@ -234,13 +203,36 @@ public class Assessment {
 	// "72" will = the integer 9
 	// "86" will = the integer 14
 	//
-	// You then need to return the highest vale
+	// You then need to return the highest value
 	//
 	//largest("55 72 86") ==> 14
 	//largest("15 72 80 164") ==> 11
 	//largest("555 72 86 45 10") ==> 15
 	
 	public int largest(String arg1) {
+		
+	String [] array = {arg1};
+	
+	
+	
+	
+		
+		//int a = arg1.substring(0,1)
+	
+			
+		
+	System.out.println(arg1.substring(0,1) + arg1.substring(1,2)) ; // for first and second digit
+	System.out.println(arg1.substring(3,4) + arg1.substring(4,5)); // going to result in 2 strings...
+	System.out.println(arg1.substring(6,7) + arg1.substring(7,8));
+	
+	
+	int largestNumber = 0;
+	
+	if (arg1.substring(0,1) < arg1.substring(1,2) && arg1.substring(0,1) < arg1.substring(7,8))
+	
+		
+		
+		
 		return -1;
 	}
 }
